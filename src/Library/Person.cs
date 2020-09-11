@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace UnitTestAndDebug
+namespace DEBUG_TEST_PERSON
 {
     public class Person
     {

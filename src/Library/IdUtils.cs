@@ -2,7 +2,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 
-namespace UnitTestAndDebug
+namespace DEBUG_TEST_PERSON
 {
     public class IdUtils
     {
