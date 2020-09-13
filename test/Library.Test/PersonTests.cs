@@ -10,27 +10,35 @@ namespace Tests
     public class Tests
     {
         private Person person;
+        private IdUtils id;
         [SetUp]
         
         public void Setup()
         {
-            this.person= new Person("John Doe", "1.234.567-8");
+           this.person = new Person("Maria Rodriguez","4.679.436-2");
+
             
         }
 
         [Test]
-        public void Person() // Cambiá el nombre para indicar qué estás probando
-        {
-            using (var sw = new StringWriter())
-         {
-            Console.SetOut(sw);
-            DEBUG_TEST_PERSON.IdUtils(person.ID);
+        public void validarId() // Cambiá el nombre para indicar qué estás probando
+        {   
+            person.ID="12";
+            Assert.AreEqual(person.ID,"4.679.436-2");
 
-            var result = sw.ToString().Trim();
-            Assert.AreEqual(true, result);
+            person.ID="1.391.395-7";
+            Assert.AreEqual(person.ID,"1.391.395-7");
+
          }
-            
+        
+        [Test]
+        public void validarName() // Cambiá el nombre para indicar qué estás probando
+        {
+            person.Name="";
+            Assert.AreEqual(person.Name,"Maria Rodriguez");
+
+         }
             // Insertá tu código  de pruebaaquí
         }
-    }
+    
 }
